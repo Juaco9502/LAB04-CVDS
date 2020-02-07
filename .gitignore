@@ -1,7 +1,5 @@
-target/
-bin/
-.project
-.vscode/
-.classpath
-.project
-.settings/
+target
+.DS_Store
+/nbproject/
+.idea
+*.iml
