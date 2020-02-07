@@ -11,7 +11,18 @@ public class PowerScore implements GameScore {
 	* @return El puntaje.
 */
 	public int calculateScore(int correctCount, int incorrectCount) {
-		return 0;		
+		int puntaje=0;
+		puntaje -= 8*incorrectCount;
+		for (int i = 1; i <= correctCount;i++){
+			puntaje += Math.pow(5,i);
+		}
+		if (puntaje < 0) {
+			puntaje = 0;
+		}
+		else if (puntaje >= 500) {
+			puntaje = 500;
+		}
+		return puntaje ;
 	}
 
 }
